@@ -69,3 +69,10 @@ For simplicity, we will provide the device manually using the UI.
      * Note that the device state is displayed as "**Inactive**" for the selected device.
     
    ![5](images/5.jpg)
+
+   * **Copy Access Token:**
+     * **Action:** Click to copy the access token for your device.
+   * **Copy Access Token:**
+     * **Token Format:** Example access token shown(e.g., `cnqAlFb3p2UVhwp4uXa`).
+    
+   ![6](images/6.jpg)
