@@ -118,3 +118,8 @@ For simplicity, we will provide the device manually using the UI.
      * Function: Click this button to add a new widget to your dashboard.
     
    ![11](images/11.jpg)
+
+   * **Widgets Options Displayed:**
+     * **Description:** Lists widget options available, including categories like Industrial widgets, Indoor Environment, Outdoor Environment, Liquid level, etc.
+
+   ![12](images/12.jpg)
