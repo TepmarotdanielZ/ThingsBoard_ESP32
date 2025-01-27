@@ -43,4 +43,6 @@ For simplicity, we will provide the device manually using the UI.
 
    ![1](images/1.jpg)
 
-   * 
+   * Click on the “`+`” icon in the top right corner of the table and then select “**Add new device**”.
+
+   ![2](images/2.jpg)
