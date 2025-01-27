@@ -96,3 +96,12 @@ For simplicity, we will provide the device manually using the UI.
      * **Active:** Shows the status of the device as "`Active`".
     
    ![8](images/8.jpg)
+
+   * **Go to the "Dashboard" page:**
+     * Access the dashboard section to view existing dashboards.
+   * **Create New Dashboard:**
+     * Access Option to create a new dashboard for monitoring and visualization.
+   * **Import Dashboard:**
+     * Option to import an existing dashboard into `ThingsBoard`.
+    
+   ![9](images/9.jpg)
