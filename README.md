@@ -62,3 +62,10 @@ For simplicity, we will provide the device manually using the UI.
      * Click **Close** to bypass the connectivity check for now.
     
    ![4](images/4.jpg)
+
+   * **Select Your Device:**
+     * Click on your device name to open its details.
+   * **Device State:**
+     * Note that the device state is displayed as "**Inactive**" for the selected device.
+    
+   ![5](images/5.jpg)
