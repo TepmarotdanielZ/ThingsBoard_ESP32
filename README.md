@@ -128,3 +128,15 @@ For simplicity, we will provide the device manually using the UI.
      * Indicates the action to choose the "`Temperature`" widget from the available options.
     
    ![13](images/13.jpg)
+
+   * **Select Device "`SpaceBOT`":**
+     * Indicates the action to choose the device named "`SpaceBOT`" for the widget configuration.
+    
+   ![14](images/14.jpg)
+
+   * **Device "`SpaceBOT`":**
+     * Indicates the selected device for the widget configuration.
+   * **Data Key: "`temperature`"**
+     * Specifies the data being pulled from the device.
+    
+   ![15](images/15.jpg)
