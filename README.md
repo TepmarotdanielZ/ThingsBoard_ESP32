@@ -46,3 +46,7 @@ For simplicity, we will provide the device manually using the UI.
    * Click on the “`+`” icon in the top right corner of the table and then select “**Add new device**”.
 
    ![2](images/2.jpg)
+
+   * Input device name. For example, “`SpaceBOT`”. No other changes required at this time. Click “**Add**” to add the device.
+
+   ![3](images/3.jpg)
