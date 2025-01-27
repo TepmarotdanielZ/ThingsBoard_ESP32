@@ -76,3 +76,14 @@ For simplicity, we will provide the device manually using the UI.
      * **Token Format:** Example access token shown(e.g., `cnqAlFb3p2UVhwp4uXa`).
     
    ![6](images/6.jpg)
+
+## 4. CONNECT WIFI:
+
+   * **Connected to Wi-Fi:**
+     * Indicates successful connection to the Wi-Fi network.
+   * **Attempting MQTT Connection:**
+     * Shows that the device is trying to establish an MQTT connection.
+   * **Connection Status:**
+     * Confirms that the MQTT connection has been established successfully.
+    
+   ![7](images/7.jpg)
