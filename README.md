@@ -87,3 +87,12 @@ For simplicity, we will provide the device manually using the UI.
      * Confirms that the MQTT connection has been established successfully.
     
    ![7](images/7.jpg)
+
+## 5. CONNECT WIFI:
+
+   * **Device Name:**
+     * **SpaceBOT:** Indicates the name of the selected device.
+   * **State:**
+     * **Active:** Shows the status of the device as "`Active`".
+    
+   ![8](images/8.jpg)
