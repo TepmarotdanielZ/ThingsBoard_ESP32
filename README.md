@@ -147,3 +147,10 @@ For simplicity, we will provide the device manually using the UI.
      * To confirm the configuration changes.
     
    ![16](images/16.jpg)
+
+   * **Save Button:**
+     * This indicates the "`Save`" button in ThingsBoard. It is used to save any changes made to the dashboard, widgets, or settings. The box mentions it is a "`prominent button to save your settings`," marked by a checkmark icon.
+   * **Data Display:**
+     * This points to the "`Data Display`" widget on the dashboard. It shows the label "`Temperature`" and its current value ("`25°C`"). This provides real-time data updates for the monitored entity (e.g., a sensor).
+    
+   ![17](images/17.jpg)
