@@ -30,7 +30,7 @@ MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol s
  
 * **Software:**
   * [Arduino IDE](https://www.arduino.cc/en/software).
-  * o	Libraries:
+  * Libraries:
     * **`PubSubClient`** for MQTT.
     * **`DHT sensor library`** (if you are using a DHT sensor).
 
@@ -123,3 +123,8 @@ For simplicity, we will provide the device manually using the UI.
      * **Description:** Lists widget options available, including categories like Industrial widgets, Indoor Environment, Outdoor Environment, Liquid level, etc.
 
    ![12](images/12.jpg)
+
+   * **Select "`Temperature`":**
+     * Indicates the action to choose the "`Temperature`" widget from the available options.
+    
+   ![13](images/13.jpg)
