@@ -50,3 +50,15 @@ For simplicity, we will provide the device manually using the UI.
    * Input device name. For example, “`SpaceBOT`”. No other changes required at this time. Click “**Add**” to add the device.
 
    ![3](images/3.jpg)
+
+   * **Create Device:**
+     * Go to **Devices** in ThingsBoard.
+     * Click **Add a new device** and note the **Access Token**.
+   * **Select Protocol:**
+     * Click on the **MQTT** protocol tab after the device is created.
+   * **Choose OS:**
+     * Select your operating system (e.g., `Windows`).
+   * **Skip Connectivity Check:**
+     * Click **Close** to bypass the connectivity check for now.
+    
+   ![4](images/4.jpg)
