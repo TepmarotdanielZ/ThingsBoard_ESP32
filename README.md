@@ -140,3 +140,10 @@ For simplicity, we will provide the device manually using the UI.
      * Specifies the data being pulled from the device.
     
    ![15](images/15.jpg)
+
+   * **Input: "`temperature`"**
+     * Indicates This is where you enter the data key.
+   * **Save:**
+     * To confirm the configuration changes.
+    
+   ![16](images/16.jpg)
