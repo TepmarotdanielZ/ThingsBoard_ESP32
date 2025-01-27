@@ -1,4 +1,4 @@
-## 1. THINGSBOARD
+## 1. THINGSBOARD:
 
 ThingsBoard is an open-source Internet of Things (IoT) platform designed to facilitate device management, data collection, visualization, and analysis.
 
@@ -159,3 +159,12 @@ For simplicity, we will provide the device manually using the UI.
      * "`Data Display in ThingsBoard`", showing how it visually represents sensor data (like temperature) on the dashboard.
 
    ![18](images/18.jpg)
+
+## 6. RESULT TESTING:
+
+   * **Data Transmitter (Tx):**
+     * The ESP32 module is transmitting temperature data ("temperature":25) to the MQTT server using ThingsBoard. The console confirms the successful publishing of telemetry data repeatedly.
+   * **Data Receiver (Rx) and Display Value:**
+     * The ThingsBoard dashboard is receiving the transmitted data and displaying it in real-time. The widget accurately reflects the temperature as `25°C`, confirming successful data communication and visualization.
+    
+   ![19](images/19.jpg)
