@@ -154,3 +154,8 @@ For simplicity, we will provide the device manually using the UI.
      * This points to the "`Data Display`" widget on the dashboard. It shows the label "`Temperature`" and its current value ("`25°C`"). This provides real-time data updates for the monitored entity (e.g., a sensor).
     
    ![17](images/17.jpg)
+
+   * **Data Display in ThingsBoard:**
+     * "`Data Display in ThingsBoard`", showing how it visually represents sensor data (like temperature) on the dashboard.
+
+   ![18](images/18.jpg)
