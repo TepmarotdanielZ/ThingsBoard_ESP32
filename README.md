@@ -30,3 +30,13 @@ MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol s
  
 * **Software:**
   * [Arduino IDE](https://www.arduino.cc/en/software).
+  * o	Libraries:
+    * **`PubSubClient`** for MQTT.
+    * **`DHT sensor library`** (if you are using a DHT sensor).
+
+
+## 3. CREATE DEVICE ON THINGSBOARD:
+
+For simplicity, we will provide the device manually using the UI.
+
+   * Login to your ThingsBoard instance and navigate to the “**Entities**”. Then click the “**Devices**” page.
