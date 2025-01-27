@@ -105,3 +105,10 @@ For simplicity, we will provide the device manually using the UI.
      * Option to import an existing dashboard into `ThingsBoard`.
     
    ![9](images/9.jpg)
+
+   * **•	Add Title: "`SpaceBOT`":**
+     * Enter the title for your dashboard.
+   * **Add Button:**
+     * Click the button labelled "Add" to finalize the addition of the dashboard.
+    
+   ![10](images/10.jpg)
