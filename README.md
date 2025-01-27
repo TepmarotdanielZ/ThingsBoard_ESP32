@@ -168,3 +168,14 @@ For simplicity, we will provide the device manually using the UI.
      * The ThingsBoard dashboard is receiving the transmitted data and displaying it in real-time. The widget accurately reflects the temperature as `25°C`, confirming successful data communication and visualization.
     
    ![19](images/19.jpg)
+
+## 7. CODE:
+
+* **Header Files:** The code includes `WiFi.h` to handle the Wi-Fi networking functionality and `PubSubClient.h` for handling the MQTT communication.
+
+```cpp
+while (1)  
+{  
+#include <WiFi.h>  
+#include <PubSubClient.h>
+```
