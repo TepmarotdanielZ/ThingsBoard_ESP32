@@ -41,4 +41,6 @@ For simplicity, we will provide the device manually using the UI.
 
    * Login to your ThingsBoard instance and navigate to the “**Entities**”. Then click the “**Devices**” page.
 
+   ![1](images/1.jpg)
+
    * 
