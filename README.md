@@ -174,8 +174,138 @@ For simplicity, we will provide the device manually using the UI.
 * **Header Files:** The code includes `WiFi.h` to handle the Wi-Fi networking functionality and `PubSubClient.h` for handling the MQTT communication.
 
 ```cpp
-while (1)  
-{  
 #include <WiFi.h>  
 #include <PubSubClient.h>
+```
+
+* **Wi-Fi Credentials:** You set up constants for your Wi-Fi SSID and password. You should replace these placeholders with your actual Wi-Fi credentials for the device to connect to the network.
+
+```cpp
+/* WIFI CREDENTIALS */   
+const char* ssid = "YOUR_SSID"; /* REPLACE WITH YOUR WIFI SSID */   
+const char* password = "YOUR_PASSWORD"; /* REPLACE WITH YOUR WIFI PASSWORD */
+```
+
+* **ThingsBoard Credentials:** Here, you define the MQTT server address, port, user (which is your ThingsBoard device token), and the telemetry topic to which you'll publish data. The token authenticates your device on the ThingsBoard platform.
+
+```cpp
+/* THINGSBOARD CREDENTIALS */   
+const char* mqttServer = "chiptree-iot.aifarm.dev";  
+const int mqttPort = 1883;  
+const char* mqttUser = "YOUR_THINGSBOARD_TOKEN"; /* YOUR THINGSBOARD TOKEN */   
+const char* telemetryTopic = "v1/devices/me/telemetry";
+```
+
+* **Client Initialization:** A `WiFiClient` object is created for connecting to Wi-Fi. The `PubSubClient` uses this `WiFiClient` to handle MQTT connections.
+
+```cpp
+/* CREATE WIFI AND MQTT CLIENTS */   
+WiFiClient wifiClient;  
+PubSubClient mqttClient(wifiClient);
+```
+
+**7.1. Setup Function:**
+
+   * `setup()`: Runs once at the beginning.
+     * **Serial Monitor:** Initializes the serial communication at 115200 baud, allowing you to see debugging output on the Serial Monitor.
+     * **Connect to Wi-Fi:** Calls the `connectToWiFi()` function to establish a Wi-Fi connection.
+     * **Set MQTT Server:** Configures the MQTT client to connect to the specified ThingsBoard server.
+    
+```cpp
+void setup() {  
+  /* START SERIAL MONITOR */   
+  Serial.begin(115200);  
+
+  /* CONNECT TO WIFI */   
+  connectToWiFi();  
+
+  /* SET MQTT SERVER */   
+  mqttClient.setServer(mqttServer, mqttPort);  
+}
+```
+
+**7.2. Loop Function:**
+
+   * `loop()`: Runs repeatedly after `setup()`.
+     * **Check MQTT Connection:** If the MQTT client is not connected, it attempts to reconnect using the `reconnect()` function.
+     * **Maintain MQTT Connection:** Calls `mqttClient.loop()` to handle incoming messages and maintain the connection.
+     * **Publish Telemetry:** Calls `publishTelemetry()` to send data.
+     * **Delay:** Waits for 5 seconds before the next cycle. You can adjust this delay based on how often you want to publish telemetry.
+    
+```cpp
+void loop() {  
+  /* ENSURE THE CLIENT IS CONNECTED */   
+  if (!mqttClient.connected()) {  
+    reconnect();  
+  }  
+  mqttClient.loop();  
+
+  /* PUBLISH TELEMETRY DATA */   
+  publishTelemetry();  
+
+  /* DELAY BEFORE THE NEXT PUBLISH */   
+  delay(5000); /* ADJUST THE DELAY AS NEEDED */   
+}
+```
+
+**7.3. Connecting to Wi-Fi:**
+
+   * `connectToWiFi()`: This function attempts to connect to the specified Wi-Fi network
+     * It initializes the connection and continually checks the status using a loop, printing a dot for each second until it connects.
+    
+```cpp
+void connectToWiFi() {  
+  Serial.print("Connecting to WiFi...");  
+  WiFi.begin(ssid, password);  
+  
+  while (WiFi.status() != WL_CONNECTED) {  
+    delay(1000);  
+    Serial.print(".");  
+  }  
+  
+  Serial.println("\nConnected to WiFi");  
+}
+```
+
+**7.4. Reconnecting to MQTT:**
+
+   * `reconnect():` This function attempts to establish a connection to the MQTT server.
+     * It uses a while loop to try connecting until successful.
+     * If connection fails, it prints the result code and waits for 5 seconds before retrying.
+    
+```cpp
+void reconnect() {  
+  /* LOOP UNTIL WE'RE RECONNECTED */   
+  while (!mqttClient.connected()) {  
+    Serial.print("Attempting MQTT connection...");  
+    /* ATTEMPT TO CONNECT */   
+    if (mqttClient.connect("ESP32Client", mqttUser, nullptr)) {  
+      Serial.println("connected");  
+    } else {  
+      Serial.print("failed, rc=");  
+      Serial.print(mqttClient.state());  
+      Serial.println(" try again in 5 seconds");  
+      delay(5000);  
+    }  
+  }  
+}
+```
+
+**7.5. Publishing Telemetry:**
+
+   * `publishTelemetry()`: This function creates a JSON payload containing telemetry data (in this example, a fixed temperature of 25 degrees) and attempts to publish it to the ThingsBoard telemetry topic.
+     * The success or failure of the publish operation is logged to the Serial Monitor.
+    
+```cpp
+void publishTelemetry() {  
+  /* CREATE JSON PAYLOAD */   
+  String payload = "{\"temperature\":25}"; /* ADJUST TEMPERATURE VALUE AS NEEDED */   
+
+  /* PUBLISH THE MESSAGE */   
+  if (mqttClient.publish(telemetryTopic, payload.c_str())) {  
+    Serial.println("Telemetry published: " + payload);  
+  } else {  
+    Serial.println("Telemetry publish failed");  
+  }  
+}
 ```
