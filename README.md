@@ -106,9 +106,15 @@ For simplicity, we will provide the device manually using the UI.
     
    ![9](images/9.jpg)
 
-   * **•	Add Title: "`SpaceBOT`":**
+   * **Add Title: "`SpaceBOT`":**
      * Enter the title for your dashboard.
    * **Add Button:**
      * Click the button labelled "Add" to finalize the addition of the dashboard.
     
    ![10](images/10.jpg)
+
+   * **Add Widget Button:**
+     * Click "`Add widget`"
+     * Function: Click this button to add a new widget to your dashboard.
+    
+   ![11](images/11.jpg)
