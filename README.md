@@ -40,3 +40,5 @@ MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol s
 For simplicity, we will provide the device manually using the UI.
 
    * Login to your ThingsBoard instance and navigate to the “**Entities**”. Then click the “**Devices**” page.
+
+   * 
